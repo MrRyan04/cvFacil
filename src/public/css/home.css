@@ -16,12 +16,18 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    padding: 25px 8%;
+    padding: 0 8%;
+    height: 80px;
+
+    background-color: #fffafc;
 }
 
-.logo{
-  height: 350px;        /* Define a altura ideal */
-  width: auto;         /* Mantém a proporção original */ /* Garante que a imagem caiba no espaço sem cortes */
+.logo {
+    height: 130px;
+    width: auto;
+
+    object-fit: contain;
+    display: block;
 }
 
 .nav-buttons {
