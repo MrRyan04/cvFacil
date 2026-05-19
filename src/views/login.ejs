@@ -1,27 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CV Fácil</title>
+
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
 
-  <h1>Login</h1>
+    <main class="container">
 
-  <form action="">
-    <label for="">Login</label>
-    <input type="text">
+        <section class="login-card">
 
-    <br>
+            <div class="top-content">
+                <h1>Bem-vindo de volta</h1>
 
-    <label for="">Senha</label>
-    <input type="password">
+                <p>
+                    Entre na sua conta para continuar criando
+                    e editando seus currículos no CV Fácil.
+                </p>
+            </div>
 
-    <br>
+            <form action="/login" method="POST" class="login-form">
 
-    <input type="submit">
-  </form>
+                <div class="input-group">
+                    <label for="email">E-mail</label>
 
-  <a href="/home">Back</a>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn-login">
+                    Entrar
+                </button>
+
+            </form>
+
+            <p class="register-text">
+                Não tem uma conta?
+                <a href="/cadastro">
+                    Cadastre-se
+                </a>
+            </p>
+
+        </section>
+
+    </main>
 
 </body>
 </html>
