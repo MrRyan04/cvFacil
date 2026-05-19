@@ -19,10 +19,9 @@ body {
     padding: 25px 8%;
 }
 
-.logo {
-    font-size: 2rem;
-    color: #d97a95;
-    font-weight: bold;
+.logo{
+  height: 350px;        /* Define a altura ideal */
+  width: auto;         /* Mantém a proporção original */ /* Garante que a imagem caiba no espaço sem cortes */
 }
 
 .nav-buttons {
