@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffafc;
+    color: #4b4b4b;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #d97a95;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-outline,
+.btn-solid {
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-outline {
+    border: 2px solid #f3bfd0;
+    color: #d97a95;
+    background-color: white;
+}
+
+.btn-outline:hover {
+    background-color: #fff0f5;
+}
+
+.btn-solid {
+    background-color: #f7c9d7;
+    color: #6b4451;
+}
+
+.btn-solid:hover {
+    background-color: #efb8c9;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 8%;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.tag {
+    background-color: #ffe8ef;
+    color: #c46f89;
+
+    padding: 8px 14px;
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin: 25px 0 20px;
+    color: #5e4b52;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #777;
+    line-height: 1.7;
+}
+
+/* BOTÕES */
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 14px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #f6c8d8;
+    color: #5c4450;
+}
+
+.btn-primary:hover {
+    background-color: #efb6c8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid #f4cad7;
+    color: #c46f89;
+    background-color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #fff0f5;
+}
+
+/* CARD */
+
+.hero-card {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+
+    width: 320px;
+    padding: 35px;
+
+    border-radius: 24px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    color: #c46f89;
+    margin-top: 15px;
+}
+
+.card p {
+    color: #777;
+    margin-top: 5px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
