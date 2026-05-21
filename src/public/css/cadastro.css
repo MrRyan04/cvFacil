@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PALETA */
+
+:root {
+    --background: oklch(0.985 0.012 70);
+    --primary: oklch(0.78 0.07 20);
+    --secondary: oklch(0.93 0.025 70);
+    --accent: oklch(0.92 0.04 15);
+    --sand: oklch(0.88 0.04 75);
+    --cream: oklch(0.97 0.018 75);
+    --text: oklch(0.28 0.025 30);
+    --text-soft: oklch(0.48 0.02 30);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            oklch(0.95 0.03 15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            oklch(0.94 0.03 75),
+            transparent 35%
+        ),
+        var(--background);
+}
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* CARD */
+
+.register-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 45px;
+
+    border-radius: 32px;
+
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.45);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.05);
+}
+
+/* TOPO */
+
+.top-content {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.top-content h1 {
+    font-size: 2rem;
+    color: var(--text);
+
+    margin-bottom: 12px;
+}
+
+.top-content p {
+    color: var(--text-soft);
+    line-height: 1.7;
+}
+
+/* FORM */
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* INPUTS */
+
+.input-group input {
+    padding: 15px 18px;
+
+    border: 1.5px solid var(--sand);
+    border-radius: 16px;
+
+    background-color: rgba(255,255,255,0.5);
+
+    outline: none;
+
+    font-size: 1rem;
+    color: var(--text);
+
+    transition: 0.25s ease;
+}
+
+.input-group input::placeholder {
+    color: oklch(0.62 0.015 30);
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+
+    background-color: rgba(255,255,255,0.75);
+
+    box-shadow:
+        0 0 0 4px rgba(205, 155, 170, 0.12);
+}
+
+/* BOTÃO */
+
+.btn-register {
+    margin-top: 10px;
+
+    border: none;
+    cursor: pointer;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    background-color: var(--primary);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+        0 10px 24px rgba(194, 135, 152, 0.18);
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.03);
+}
+
+/* LOGIN */
+
+.login-text {
+    margin-top: 28px;
+
+    text-align: center;
+    color: var(--text-soft);
+
+    line-height: 1.6;
+}
+
+.login-text a {
+    text-decoration: none;
+
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 16px;
+    }
+
+    .register-card {
+        padding: 35px 25px;
+        border-radius: 28px;
+    }
+
+    .top-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .top-content p {
+        font-size: 0.95rem;
+    }
+
+    .btn-register {
+        padding: 15px;
+    }
+}

@@ -6,5 +6,6 @@ const pageController = require("../controllers/pageController");
 
 router.get("/", pageController.home);
 router.get("/login", pageController.login);
+router.get("/cadastro", pageController.cadastro);
 
 module.exports = router;
