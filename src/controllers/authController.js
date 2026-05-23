@@ -1,14 +1,22 @@
+const bcrypt = require("bcrypt");
 const User = require("../models/User");
 
 exports.register = async (req, res) => {
 
     const { nome, email, senha } = req.body;
 
-    const user = await User.create({
-        nome,
-        email,
-        senha
-    });
+    const senhaHash =
+        await bcrypt.hash(
+            senha,
+            10
+        );
+
+    const user =
+        await User.create({
+            nome,
+            email,
+            senha: senhaHash
+        });
 
     console.log(user);
 
@@ -35,5 +43,7 @@ exports.login = async (req, res) => {
         );
     }
 
-    return res.redirect("/");
+    return res.send(
+        `Bem-vindo ${user.nome}`
+    );
 };

@@ -7,10 +7,10 @@ const PORT = 3000;
 
 sequelize.sync()
     .then(() => {
-        console.log("Banco conectado");
+        console.log("Banco ok");
 
         app.listen(PORT, () => {
-            console.log("Servidor rodando");
+            console.log("Servidor ok");
         });
     })
     .catch(err => console.log(err));
