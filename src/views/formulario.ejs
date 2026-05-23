@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Criar Currículo | CV Fácil</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/formulario.css"
+    >
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <img
+                class="logo"
+                src="/img/logocrop.png"
+                alt="CV Fácil"
+            >
+
+            <div class="nav-buttons">
+
+                <% if (user) { %>
+
+                    <span class="welcome-text">
+                        Olá, <%= user.nome %>
+                    </span>
+
+                <% } %>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section">
+
+            <span class="tag">
+                Monte seu currículo
+            </span>
+
+            <h1>
+                Preencha suas informações
+            </h1>
+
+            <p class="description">
+                Comece criando seu currículo.
+                Você poderá visualizar tudo
+                organizado automaticamente.
+            </p>
+
+            <form
+                action="/curriculo"
+                method="POST"
+                class="curriculo-form"
+            >
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            name="nome"
+                            placeholder="Seu nome completo"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="seuemail@gmail.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>
+                            Telefone
+                        </label>
+
+                        <input
+                            type="text"
+                            name="telefone"
+                            placeholder="(11) 99999-9999"
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>
+                            Cidade
+                        </label>
+
+                        <input
+                            type="text"
+                            name="cidade"
+                            placeholder="Sua cidade"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Objetivo profissional
+                    </label>
+
+                    <textarea
+                        name="objetivo"
+                        placeholder="Fale sobre seu objetivo profissional..."
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Sobre você
+                    </label>
+
+                    <textarea
+                        name="sobre"
+                        placeholder="Conte um pouco sobre você..."
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Formação
+                    </label>
+
+                    <textarea
+                        name="formacao"
+                        placeholder="Ex: Ensino Médio, curso técnico..."
+                    ></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Experiência profissional
+                    </label>
+
+                    <textarea
+                        name="experiencia"
+                        placeholder="Fale sobre experiências anteriores..."
+                    ></textarea>
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn-submit"
+                >
+                    Criar Currículo
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

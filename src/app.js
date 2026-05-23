@@ -20,9 +20,12 @@ app.use(
     })
 );
 
+
+const curriculoRoutes = require("./routes/curriculoRoutes");
 const pageRoutes = require("./routes/pageRoutes");
 const authRoutes = require("./routes/authRoutes");
 
+app.use("/", curriculoRoutes);
 app.use("/", pageRoutes);
 app.use("/", authRoutes);
 
