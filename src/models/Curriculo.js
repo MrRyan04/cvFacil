@@ -9,6 +9,12 @@ const Curriculo =
     sequelize.define(
         "Curriculo",
         {
+            userId: {
+                type:
+                    DataTypes.INTEGER,
+
+                allowNull: false
+            },
 
             titulo: {
                 type:

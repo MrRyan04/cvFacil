@@ -23,4 +23,10 @@ router.post(
     curriculoController.criar
 );
 
+router.get(
+    "/meusCurriculos",
+    authMiddleware.isAuthenticated,
+    curriculoController.listar
+);
+
 module.exports = router;

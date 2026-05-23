@@ -1,6 +1,22 @@
 const Curriculo =
     require("../models/Curriculo");
+    
 
+    exports.listar = async (req, res) => {
+
+    const curriculos =
+        await Curriculo.findAll({
+            where: {
+                userId:
+                    req.session.user.id
+            }
+        });
+
+        res.render("meusCurriculos", {
+            user: req.session.user,
+            curriculos
+        });
+};
 
 exports.formulario =
 (req, res) => {
@@ -31,9 +47,12 @@ async (req, res) => {
 
     } = req.body;
 
+    const userId = req.session.user.id;
+
     const curriculo =
         await Curriculo.create({
 
+            userId,
             titulo,
             nome,
             email,
@@ -48,7 +67,5 @@ async (req, res) => {
 
    // console.log(curriculo);
 
-    res.send(
-        "Currículo salvo!"
-    );
+    return res.redirect("/");
 };

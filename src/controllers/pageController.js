@@ -11,3 +11,7 @@ exports.login = (req, res) => {
 exports.cadastro = (req, res) => {
   res.render("cadastro");
 };
+
+exports.meusCurriculos = (req, res) => {
+  res.render("meusCurriculos");
+};

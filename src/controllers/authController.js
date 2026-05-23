@@ -18,7 +18,7 @@ exports.register = async (req, res) => {
             senha: senhaHash
         });
 
-    console.log(user);
+   // console.log(user);
 
     res.redirect("/login");
 };
@@ -32,9 +32,7 @@ exports.login = async (req, res) => {
     });
 
     if (!user) {
-        return res.send(
-            "Usuário não encontrado"
-        );
+        res.redirect("/login");
     }
 
     const senhaCorreta =

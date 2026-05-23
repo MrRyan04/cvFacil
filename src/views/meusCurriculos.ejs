@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Meus Curriculos</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/meucv.css"
+    >
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            
+            <a href="/" class="logo-link">
+                <img
+                class="logo"
+                src="/img/logocrop.png"
+                alt="CV Fácil"
+                >
+            </a>
+            
+        </nav>
+    </header>
+    <div class="bodyy">
+    <h1>Meus Currículos</h1>
+
+<div class="grid">
+
+    <% curriculos.forEach(c => { %>
+
+        <div class="card">
+
+            <div class="card-header">
+                <h2><%= c.titulo %></h2>
+            </div>
+
+            <div class="card-body">
+                <p><strong>Nome:</strong> <%= c.nome %></p>
+                <p><strong>Email:</strong> <%= c.email %></p>
+            </div>
+
+            <div class="card-footer">
+                <a href="/curriculos/<%= c.id %>" class="btn-open">
+                    Abrir Currículo
+                </a>
+            </div>
+
+        </div>
+
+    <% }) %>
+
+</div>
+</div>
+</body>
+</html>
