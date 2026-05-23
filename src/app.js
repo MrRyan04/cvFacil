@@ -12,7 +12,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 const pageRoutes = require("./routes/pageRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 app.use("/", pageRoutes);
+app.use("/", authRoutes);
 
 module.exports = app;

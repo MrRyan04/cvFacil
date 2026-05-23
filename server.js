@@ -1,8 +1,4 @@
 const app = require("./src/app");
-
-app.listen(3000, () => {
-  console.log("Servidor rodando");
-});const app = require("./src/app");
 const sequelize = require("./src/config/database");
 
 require("./src/models/User");
