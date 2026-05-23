@@ -49,7 +49,7 @@ exports.login = async (req, res) => {
         );
     }
 
-    return res.send(
-        `Bem-vindo ${user.nome}`
-    );
+req.session.user = user;
+
+return res.redirect("/");
 };
