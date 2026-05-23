@@ -8,47 +8,51 @@
 </head>
 <body>
 
-    <div class="cv">
+        <div class="cv">
 
-        <!-- HEADER -->
-        <header class="cv-header">
+            <header class="cv-header">
 
-            <h1><%= curriculo.nome %></h1>
+                <h1><%= curriculo.nome %></h1>
 
-            <div class="cv-contact">
-                <span><%= curriculo.email %></span>
-                <span>•</span>
-                <span><%= curriculo.telefone %></span>
-                <span>•</span>
-                <span><%= curriculo.cidade %></span>
-            </div>
+                <div class="cv-contact">
+                    <span><%= curriculo.email %></span>
+                    <span>•</span>
+                    <span><%= curriculo.telefone %></span>
+                    <span>•</span>
+                    <span><%= curriculo.cidade %></span>
+                </div>
 
-        </header>
+            </header>
 
-        <hr>
+            <hr>
 
-        <!-- SEÇÕES -->
-        <section>
-            <h2>Objetivo</h2>
-            <p><%= curriculo.objetivo %></p>
-        </section>
+            <section>
+                <h2>Objetivo</h2>
+                <p><%= curriculo.objetivo %></p>
+            </section>
 
-        <section>
-            <h2>Sobre</h2>
-            <p><%= curriculo.sobre %></p>
-        </section>
+            <section>
+                <h2>Sobre</h2>
+                <p><%= curriculo.sobre %></p>
+            </section>
 
-        <section>
-            <h2>Formação</h2>
-            <p><%= curriculo.formacao %></p>
-        </section>
+            <section>
+                <h2>Formação</h2>
+                <p><%= curriculo.formacao %></p>
+            </section>
 
-        <section>
-            <h2>Experiência</h2>
-            <p><%= curriculo.experiencia %></p>
-        </section>
+            <section>
+                <h2>Experiência</h2>
+                <p><%= curriculo.experiencia %></p>
+            </section>
 
-    </div>
+        </div>
 
-</body>
+       <!-- <button onclick="baixarPDF()" class="btn-pdf">
+            Baixar PDF
+        </button>
+        -->
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="/js/baixarPdf.js"></script>
 </html>

@@ -8,6 +8,6 @@ router.get("/", pageController.home);
 router.get("/login", pageController.login);
 router.get("/cadastro", pageController.cadastro);
 router.get("/meusCurriculos", pageController.meusCurriculos);
-router.get("/curriculos", pageController.curriculo);
+
 
 module.exports = router;
