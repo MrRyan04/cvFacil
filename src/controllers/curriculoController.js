@@ -69,3 +69,25 @@ async (req, res) => {
 
     return res.redirect("/");
 };
+
+exports.visualizar = async (req, res) => {
+
+    const { id } = req.params;
+
+    const curriculo =
+        await Curriculo.findOne({
+            where: {
+                id,
+                userId: req.session.user.id
+            }
+        });
+
+    if (!curriculo) {
+        return res.send("Currículo não encontrado");
+    }
+
+    return res.render("curriculo", {
+        user: req.session.user,
+        curriculo
+    });
+};

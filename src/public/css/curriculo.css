@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9ecef;
+    padding: 40px;
+    color: #222;
+}
+
+
+.cv {
+    width: 210mm;
+    min-height: 297mm;
+
+    margin: 20px auto;
+
+    background: white;
+    padding: 20mm 18mm;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    box-sizing: border-box;
+}
+
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cv-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+    color: #c46f89;
+}
+
+.cv-contact {
+    font-size: 0.95rem;
+    color: #666;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}
+
+section {
+    margin-bottom: 22px;
+}
+
+section h2 {
+    font-size: 1.2rem;
+    color: #c46f89;
+
+    margin-bottom: 8px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section p {
+    line-height: 1.7;
+    color: #333;
+}
+
+
+@media (max-width: 600px) {
+    .cv {
+        padding: 30px 25px;
+    }
+
+    .cv-header h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -29,4 +29,9 @@ router.get(
     curriculoController.listar
 );
 
+router.get(
+    "/curriculos/:id",
+    curriculoController.visualizar
+);
+
 module.exports = router;
