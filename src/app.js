@@ -1,3 +1,4 @@
+const session = require("express-session");
 const express = require("express");
 const path = require("path");
 
@@ -10,6 +11,14 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(
+    session({
+        secret: "secretinfos",
+        resave: false,
+        saveUninitialized: false
+    })
+);
 
 const pageRoutes = require("./routes/pageRoutes");
 const authRoutes = require("./routes/authRoutes");
