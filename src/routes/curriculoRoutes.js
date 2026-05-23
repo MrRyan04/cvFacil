@@ -1,3 +1,5 @@
+const authMiddleware = require("../middlewares/authMiddleware");
+
 const express = require("express");
 
 const router = express.Router();
@@ -8,7 +10,17 @@ const curriculoController =
 
 router.get(
     "/curriculo",
-    curriculoController.formulario
+
+    authMiddleware
+        .isAuthenticated,
+
+    curriculoController
+        .formulario
+);
+
+router.post(
+    "/curriculo",
+    curriculoController.criar
 );
 
 module.exports = router;

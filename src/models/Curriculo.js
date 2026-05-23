@@ -10,6 +10,13 @@ const Curriculo =
         "Curriculo",
         {
 
+            titulo: {
+                type:
+                    DataTypes.STRING,
+
+                allowNull: false
+            },
+
             nome: {
                 type:
                     DataTypes.STRING,
