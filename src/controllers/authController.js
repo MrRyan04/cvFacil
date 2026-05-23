@@ -37,7 +37,13 @@ exports.login = async (req, res) => {
         );
     }
 
-    if (user.senha !== senha) {
+    const senhaCorreta =
+        await bcrypt.compare(
+            senha,
+            user.senha
+        );
+
+    if (!senhaCorreta) {
         return res.send(
             "Senha incorreta"
         );
