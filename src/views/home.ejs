@@ -14,8 +14,23 @@
           
           <img class="logo" src="img/logocrop.png">
           <div class="nav-buttons">
-                <a href="/login" class="btn-outline">Login</a>
-                <a href="/cadastro" class="btn-solid">Cadastrar</a>
+            <% if (user) { %>
+
+                <span class="welcome-text">
+                    Olá, <%= user.nome %>
+                </span>
+
+            <% } else { %>
+
+                <a href="/login" class="btn-outline">
+                    Login
+                </a>
+
+                <a href="/cadastro" class="btn-solid">
+                    Cadastrar
+                </a>
+
+            <% } %>
             </div>
         </nav>
     </header>

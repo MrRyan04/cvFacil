@@ -183,6 +183,10 @@ body {
     color: var(--text);
 }
 
+.welcome-text{
+    color: var(--primary);
+}
+
 .btn-secondary:hover {
     background-color: var(--cream);
     transform: translateY(-2px);
