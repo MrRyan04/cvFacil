@@ -19,23 +19,14 @@
     <header>
         <nav class="navbar">
 
-            <img
-                class="logo"
-                src="/img/logocrop.png"
-                alt="CV Fácil"
-            >
+            <a href="/" class="logo-link">
+                <img
+                    class="logo"
+                    src="/img/logocrop.png"
+                    alt="CV Fácil"
+                >
+            </a>
 
-            <div class="nav-buttons">
-
-                <% if (user) { %>
-
-                    <span class="welcome-text">
-                        Olá, <%= user.nome %>
-                    </span>
-
-                <% } %>
-
-            </div>
         </nav>
     </header>
 
@@ -99,7 +90,7 @@
                         <input
                             type="text"
                             name="telefone"
-                            placeholder="(11) 99999-9999"
+                            placeholder="(XX) 9XXXX-XXXX"
                         >
                     </div>
 
