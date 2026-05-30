@@ -5,6 +5,25 @@ exports.register = async (req, res) => {
 
     const { nome, email, senha } = req.body;
 
+        const usuarioExistente =
+        await User.findOne({
+            where: { email }
+        });
+
+    if (usuarioExistente) {
+
+        return res.send(`
+            <script>
+                alert(
+                    "Usuário já cadastrado, faça o login"
+                );
+
+                window.location.href =
+                    "/login";
+            </script>
+        `);
+    }
+
     const senhaHash =
         await bcrypt.hash(
             senha,
